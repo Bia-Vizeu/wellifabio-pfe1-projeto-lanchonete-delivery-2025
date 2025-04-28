@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,51 @@
     <link rel="stylesheet" href="../styles/home.css">
 </head>
 <body>
+    <header>
+        <h1>Lanchonete Delivery</h1>
+        <div class="botoes-header">
+            <button id="toggleCompleted">Concluídos</button>
+            <button id="verPedidos">Pedidos Finalizados</button>
+        </div>
+    </header>
     
+    <main>
+        <section>
+            <h2>Cadastrar Pedido</h2>
+            <form id="orderForm">
+                <label for="name">Nome do Cliente:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="product">Produto:</label>
+                <select id="product" name="product" required>
+                    <option value="X-Burger">X-Burger</option>
+                    <option value="X-Salada">X-Salada</option>
+                    <option value="X-Bacon">X-Bacon</option>
+                    <option value="X-Tudo">X-Tudo</option>
+                    <option value="X-Frango">X-Frango</option>
+                    <option value="X-Calabresa">X-Calabresa</option>
+                    <option value="X-Coração">X-Coração</option>
+                    <option value="X-Cheddar">X-Cheddar</option>
+                    <option value="Refrigerante-Lata">Refrigerante Lata</option>
+                    <option value="Refrigerante 2L">Refrigerante 2L</option>
+                </select>
+                <button type="submit">Gerar Pedido</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Pedidos em Execução</h2>
+            <ul id="orderList"></ul>
+        </section>
+
+        <section id="completedSection" style="display: none;">
+            <h2>Pedidos Finalizados</h2>
+            <ul id="completedList"></ul>
+        </section>
+    </main>
+    <script src="../scripts/home.js"></script>
 </body>
-<script src="../scripts/home.js"></script>
 </html>
